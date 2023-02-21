@@ -123,6 +123,9 @@ class Student {
 
     getAverage() {
         const getMarks = Object.keys(this.marks);
+        if(getMarks.length === 0) {
+            return 0;
+        }
         let result = 0;
         for (let i = 0; i < getMarks.length; i++) {
             result += this.getAverageBySubject(getMarks[i]);  
